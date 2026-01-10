@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -19,14 +18,14 @@ header {
     text-align: center;
 }
 
-header h1 {
+header p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
     margin-bottom: 0.5rem;
 }
 
-header h1 span#course-title {
+header p span#course-title {
     display: block;
 }
 
@@ -168,8 +167,6 @@ footer p {
     font-size: 0.95rem;
 }
 
-
-/* Please never ask me to do this again, I had to fiddle around with this for hours */
 @media (min-width: 768px) {
     main {
         grid-template-columns: 1fr 1fr;
