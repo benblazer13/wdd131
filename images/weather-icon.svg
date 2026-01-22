@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Sun -->
+  <circle cx="22" cy="22" r="10" fill="#FDB813"></circle>
+  <g stroke="#FDB813" stroke-width="2" stroke-linecap="round">
+    <line x1="22" y1="4" x2="22" y2="10"></line>
+    <line x1="22" y1="34" x2="22" y2="40"></line>
+    <line x1="4" y1="22" x2="10" y2="22"></line>
+    <line x1="34" y1="22" x2="40" y2="22"></line>
+    <line x1="9" y1="9" x2="13" y2="13"></line>
+    <line x1="31" y1="31" x2="35" y2="35"></line>
+    <line x1="9" y1="35" x2="13" y2="31"></line>
+    <line x1="31" y1="13" x2="35" y2="9"></line>
+  </g>
+
+  <!-- Cloud -->
+  <path d="M44 40H24a8 8 0 0 1 0-16 10 10 0 0 1 19-2 7 7 0 0 1 1 18z" fill="#E6E6E6"></path>
+</svg>

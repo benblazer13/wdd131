@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pittsburgh, Pennsylvania - City Overview</title>
+    <meta name="description"
+        content="A resource page for Pittsburgh, PA, with local data and current weather conditions.">
+    <meta name="author" content="Benjamin Hoffman">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css" media="(min-width: 600px)">
+
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Pittsburgh</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/pittsburgh-large.webp" media="(min-width: 800px)">
+                <source srcset="images/pittsburgh-medium.webp" media="(min-width: 500px)">
+                <img src="images/pittsburgh-small.webp" alt="Pittsburgh skyline with bridges" width="1000" height="600"
+                    loading="lazy">
+            </picture>
+
+            <section class="data-card">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 151.1 sq km</li>
+                    <li><strong>Population:</strong> 302,971</li>
+                    <li><strong>Founded:</strong> 1758</li>
+                    <li><strong>Nickname:</strong> Steel City / City of Bridges</li>
+                    <li><strong>Currency:</strong> US Dollar</li>
+                    <li><strong>Time Zone:</strong> EST (UTC-5)</li>
+                    <li><strong>Calling Code:</strong> +1 412</li>
+                </ul>
+            </section>
+
+            <section class="weather-card">
+                <h2 id="weather-heading">Weather</h2>
+                <img src="images/weather-icon.svg" alt="Weather icon" class="weather-icon-mobile">
+                <div class="weather-info">
+                    <p><strong>Temperature:</strong> <span id="temp">5</span>°C</p>
+                    <p><strong>Conditions:</strong> Partly Cloudy</p>
+                    <p><strong>Wind:</strong> <span id="wind">10</span> km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> ~ Benjamin Hoffman ~ Pittsburgh, Pennsylvania ~</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
