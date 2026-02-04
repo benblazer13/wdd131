@@ -3,13 +3,37 @@
 
 /* CSS Variables for Color Schema */
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #0f172a;
-    --accent-color: #10b981;
-    --background-color: #f8fafc;
-    --white: #ffffff;
-    --light-gray: #e2e8f0;
-    --medium-gray: #64748b;
+    /* Primary Palette */
+    --primary-color: #00897B;
+    --primary-light: #4DB6AC;
+    --primary-dark: #00695C;
+    
+    /* Status Colors */
+    --danger-color: #ff3b30;
+    --success-color: #4CAF50;
+    --warning-color: #FF9800;
+    
+    /* Text Hierarchy */
+    --text-primary: #000;
+    --text-secondary: #666;
+    --text-light: #999;
+    --white: #fff;
+    
+    /* Backgrounds */
+    --background-main: #F8F9FA;
+    --background-light: #fff;
+    --background-dark: #f0f0f0;
+    
+    /* Borders */
+    --border-standard: #ddd;
+    --border-light: #E8E8E8;
+    
+    /* Legacy aliases for compatibility */
+    --secondary-color: #000;
+    --accent-color: #4CAF50;
+    --background-color: #F8F9FA;
+    --light-gray: #E8E8E8;
+    --medium-gray: #999;
 }
 
 /* Global Styles */
@@ -21,8 +45,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    color: var(--secondary-color);
-    background-color: var(--background-color);
+    color: var(--text-primary);
+    background-color: var(--background-main);
     line-height: 1.6;
     padding: 20px;
 }
@@ -44,7 +68,7 @@ h1 {
 h2 {
     font-size: 2rem;
     font-weight: 600;
-    border-bottom: 3px solid var(--accent-color);
+    border-bottom: 3px solid var(--success-color);
     padding-bottom: 0.5rem;
     margin-top: 2rem;
 }
@@ -82,8 +106,9 @@ main {
 section {
     margin-bottom: 3rem;
     padding: 1.5rem;
-    background-color: var(--background-color);
+    background-color: var(--background-light);
     border-radius: 8px;
+    border: 1px solid var(--border-light);
 }
 
 /* Site Name Section */
@@ -97,22 +122,23 @@ section {
 }
 
 .logo-placeholder {
-    background-color: var(--light-gray);
-    border: 2px dashed var(--medium-gray);
+    background-color: var(--background-dark);
+    border: 2px dashed var(--border-standard);
     border-radius: 8px;
     padding: 3rem;
     text-align: center;
     margin: 1.5rem 0;
-    color: var(--medium-gray);
+    color: var(--text-light);
 }
 
 /* Scenarios */
 .scenario {
-    background-color: var(--white);
+    background-color: var(--background-light);
     padding: 1.5rem;
     margin: 1rem 0;
-    border-left: 4px solid var(--accent-color);
+    border-left: 4px solid var(--success-color);
     border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .scenario h3 {
@@ -121,7 +147,7 @@ section {
 }
 
 .scenario strong {
-    color: var(--accent-color);
+    color: var(--success-color);
 }
 
 /* Color Schema Section */
@@ -133,11 +159,12 @@ section {
 }
 
 .color-box {
-    background-color: var(--white);
+    background-color: var(--background-light);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    border: 1px solid var(--border-light);
 }
 
 .color-box h3 {
@@ -155,24 +182,24 @@ section {
 }
 
 .primary-color .color-code {
-    background-color: #2563eb;
+    background-color: #00897B;
     color: var(--white);
 }
 
 .secondary-color .color-code {
-    background-color: #0f172a;
+    background-color: #000;
     color: var(--white);
 }
 
 .accent-color .color-code {
-    background-color: #10b981;
+    background-color: #4CAF50;
     color: var(--white);
 }
 
 .background-color .color-code {
-    background-color: #f8fafc;
-    color: var(--secondary-color);
-    border: 1px solid var(--light-gray);
+    background-color: #F8F9FA;
+    color: var(--text-primary);
+    border: 1px solid var(--border-standard);
 }
 
 .color-usage {
@@ -183,11 +210,12 @@ section {
 
 /* Typography Section */
 .font-sample {
-    background-color: var(--white);
+    background-color: var(--background-light);
     padding: 1.5rem;
     margin: 1.5rem 0;
     border-radius: 8px;
     border-left: 4px solid var(--primary-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .heading-font-sample {
@@ -203,9 +231,10 @@ section {
 .sample-text {
     font-size: 1.2rem;
     padding: 1rem;
-    background-color: var(--background-color);
+    background-color: var(--background-main);
     border-radius: 4px;
     margin-top: 1rem;
+    border: 1px solid var(--border-light);
 }
 
 .heading-example {
@@ -224,20 +253,20 @@ section {
 }
 
 .wireframe {
-    border: 2px solid var(--medium-gray);
+    border: 2px solid var(--border-standard);
     border-radius: 8px;
     padding: 1rem;
-    background-color: var(--white);
+    background-color: var(--background-light);
 }
 
 .wireframe-section {
-    background-color: var(--light-gray);
-    border: 1px solid var(--medium-gray);
+    background-color: var(--background-dark);
+    border: 1px solid var(--border-standard);
     padding: 1rem;
     margin: 0.5rem 0;
     text-align: center;
     border-radius: 4px;
-    color: var(--secondary-color);
+    color: var(--text-primary);
 }
 
 /* Mobile Wireframe */
@@ -259,7 +288,7 @@ section {
 }
 
 .mobile-wireframe .hero {
-    background-color: #dbeafe;
+    background-color: #B2DFDB;
     padding: 2rem;
     min-height: 150px;
 }
@@ -269,12 +298,12 @@ section {
 }
 
 .mobile-wireframe .cta {
-    background-color: #d1fae5;
+    background-color: #C8E6C9;
     padding: 1.5rem;
 }
 
 .mobile-wireframe .footer {
-    background-color: var(--secondary-color);
+    background-color: var(--text-primary);
     color: var(--white);
     padding: 1rem;
 }
@@ -294,7 +323,7 @@ section {
 }
 
 .hero-desktop {
-    background-color: #dbeafe;
+    background-color: #B2DFDB;
     padding: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -310,20 +339,20 @@ section {
 }
 
 .feature-col {
-    background-color: var(--light-gray);
+    background-color: var(--background-dark);
     padding: 2rem;
-    border: 1px solid var(--medium-gray);
+    border: 1px solid var(--border-standard);
     border-radius: 4px;
     min-height: 150px;
 }
 
 .cta-desktop {
-    background-color: #d1fae5;
+    background-color: #C8E6C9;
     padding: 2rem;
 }
 
 .footer-desktop {
-    background-color: var(--secondary-color);
+    background-color: var(--text-primary);
     color: var(--white);
     padding: 1.5rem;
 }
@@ -343,7 +372,7 @@ footer {
     text-align: center;
     padding: 2rem;
     margin-top: 2rem;
-    color: var(--medium-gray);
+    color: var(--text-light);
     font-size: 0.9rem;
 }
 
@@ -394,6 +423,6 @@ strong {
 }
 
 em {
-    color: var(--medium-gray);
+    color: var(--text-light);
     font-style: italic;
 }
