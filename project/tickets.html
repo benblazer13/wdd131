@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit bug reports and feature requests for GoGrocIt. Help us improve your grocery shopping experience.">
+    <meta name="author" content="Benjamin Hoffman">
+    <title>Submit a Ticket - GoGrocIt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">GoGrocIt</span>
+                </a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="tickets.html" class="active">Submit Ticket</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Submit a Support Ticket</h1>
+                <p>Help us improve GoGrocIt by reporting bugs or requesting new features</p>
+            </div>
+        </section>
+
+        <section class="ticket-form-section">
+            <div class="container">
+                <div class="form-layout">
+                    <div class="form-sidebar">
+                        <h2>Before You Submit</h2>
+                        <div class="info-box">
+                            <h3>Bug Reports</h3>
+                            <p>Please include:</p>
+                            <ul>
+                                <li>Steps to reproduce the issue</li>
+                                <li>Expected vs actual behavior</li>
+                                <li>Your device and app version</li>
+                                <li>Screenshots if applicable</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h3>Feature Requests</h3>
+                            <p>Help us understand:</p>
+                            <ul>
+                                <li>What problem would this solve?</li>
+                                <li>How would you use this feature?</li>
+                                <li>Are there similar features you've seen?</li>
+                            </ul>
+                        </div>
+                        <div class="info-box success-bg">
+                            <h3>Response Time</h3>
+                            <p>We typically respond to tickets within 1-2 business days. Critical bugs are addressed immediately.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-main">
+                        <form id="ticketForm" class="ticket-form" novalidate>
+                            
+                            <div class="form-group">
+                                <label for="ticketType">Ticket Type <span class="required">*</span></label>
+                                <select id="ticketType" name="ticketType" required>
+                                    <option value="">Select ticket type</option>
+                                    <option value="bug">Bug Report</option>
+                                    <option value="feature">Feature Request</option>
+                                    <option value="question">General Question</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="error-message" id="ticketTypeError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="priority">Priority Level <span class="required">*</span></label>
+                                <select id="priority" name="priority" required>
+                                    <option value="">Select priority</option>
+                                    <option value="low">Low - Minor inconvenience</option>
+                                    <option value="medium">Medium - Affects functionality</option>
+                                    <option value="high">High - Cannot use feature</option>
+                                    <option value="critical">Critical - App is unusable</option>
+                                </select>
+                                <span class="error-message" id="priorityError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">Your Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="required">*</span></label>
+                                <input type="text" id="subject" name="subject" placeholder="Brief description of your issue" required minlength="5" maxlength="100">
+                                <span class="char-count"><span id="subjectCount">0</span>/100 characters</span>
+                                <span class="error-message" id="subjectError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">Detailed Description <span class="required">*</span></label>
+                                <textarea id="description" name="description" rows="6" placeholder="Please provide as much detail as possible..." required minlength="20"></textarea>
+                                <span class="char-count"><span id="descriptionCount">0</span> characters</span>
+                                <span class="error-message" id="descriptionError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="device">Device Information</label>
+                                <input type="text" id="device" name="device" placeholder="e.g., iPhone 13, Samsung Galaxy S21">
+                                <small>Optional but helpful for bug reports</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="appVersion">App Version</label>
+                                <input type="text" id="appVersion" name="appVersion" placeholder="e.g., 2.5.1">
+                                <small>Find this in Settings > About</small>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="updates" name="updates">
+                                    <span>Send me updates about this ticket</span>
+                                </label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-large">Submit Ticket</button>
+                                <button type="reset" class="btn btn-outline">Clear Form</button>
+                            </div>
+                        </form>
+
+                        <div id="successMessage" class="success-message hidden">
+                            <div class="success-icon">✓</div>
+                            <h3>Ticket Submitted Successfully!</h3>
+                            <p>Thank you for your feedback. Your ticket has been received and assigned number <strong id="ticketNumber"></strong>.</p>
+                            <p>You'll receive a confirmation email shortly at <strong id="confirmEmail"></strong>.</p>
+                            <button class="btn btn-primary" id="submitAnother">Submit Another Ticket</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-tickets">
+            <div class="container">
+                <h2>Your Recent Submissions</h2>
+                <p class="section-subtitle">View your previously submitted tickets</p>
+                <div id="recentTicketsList" class="tickets-list">
+                </div>
+                <div id="noTickets" class="no-tickets hidden">
+                    <p>You haven't submitted any tickets yet.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>How long does it take to get a response?</summary>
+                        <p>We typically respond to all tickets within 1-2 business days. Critical bug reports affecting app functionality are prioritized and addressed within 24 hours.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can I track the status of my ticket?</summary>
+                        <p>Yes! After submitting a ticket, you'll receive a ticket number. Your recent submissions are also shown above for quick reference. We'll email you updates as your ticket is processed.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What information should I include in a bug report?</summary>
+                        <p>Please include: steps to reproduce the bug, what you expected to happen, what actually happened, your device type, and app version. Screenshots are very helpful!</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How do I submit a feature request?</summary>
+                        <p>Select "Feature Request" as the ticket type and describe the feature you'd like to see. Explain the problem it would solve and how you envision using it. The more detail, the better!</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GoGrocIt</h3>
+                    <p>Making grocery shopping simple and efficient for everyone.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="tickets.html">Submit Ticket</a></li>
+                        <li><a href="references.html">References</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GoGrocIt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

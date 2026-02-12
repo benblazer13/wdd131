@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover all the features GoGrocIt offers - from smart lists to meal planning, budget tracking, and family sharing.">
+    <meta name="author" content="Benjamin Hoffman">
+    <title>Features - GoGrocIt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">GoGrocIt</span>
+                </a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html" class="active">Features</a></li>
+                    <li><a href="tickets.html">Submit Ticket</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Powerful Features for Smarter Shopping</h1>
+                <p>Everything you need to plan, shop, and save with confidence</p>
+            </div>
+        </section>
+
+        <section class="features-filter">
+            <div class="container">
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All Features</button>
+                    <button class="filter-btn" data-filter="planning">Planning</button>
+                    <button class="filter-btn" data-filter="shopping">Shopping</button>
+                    <button class="filter-btn" data-filter="tracking">Tracking</button>
+                    <button class="filter-btn" data-filter="sharing">Sharing</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="detailed-features">
+            <div class="container">
+                <div class="features-container" id="featuresContainer">
+                    
+                    <article class="detailed-feature" data-category="shopping">
+                        <div class="feature-content">
+                            <h2>Smart Shopping Lists</h2>
+                            <p class="feature-description">Create and manage multiple shopping lists with intelligent features that learn from your shopping patterns. Items are automatically organized by store section, making your shopping trips faster and more efficient.</p>
+                            <ul class="feature-benefits">
+                                <li>Automatic categorization by store aisle</li>
+                                <li>Predictive text suggests frequently bought items</li>
+                                <li>Check off items as you shop</li>
+                                <li>Add custom notes to any item</li>
+                                <li>Duplicate lists for recurring shopping trips</li>
+                            </ul>
+                        </div>
+                        <div class="feature-visual">
+                            <img src="images/feature-lists.jpg" alt="Smart shopping lists interface" loading="lazy" width="400" height="300">
+                        </div>
+                    </article>
+
+                    <article class="detailed-feature reverse" data-category="planning">
+                        <div class="feature-content">
+                            <h2>Meal Planning Integration</h2>
+                            <p class="feature-description">Plan your meals for the week and automatically generate shopping lists with all required ingredients. Save your favorite recipes and meal plans for future use.</p>
+                            <ul class="feature-benefits">
+                                <li>Weekly meal calendar view</li>
+                                <li>Recipe storage with ingredient auto-extraction</li>
+                                <li>Serving size adjustments</li>
+                                <li>Nutritional information tracking</li>
+                                <li>One-click shopping list generation from meal plans</li>
+                            </ul>
+                        </div>
+                        <div class="feature-visual">
+                            <img src="images/feature-meals.jpg" alt="Meal planning calendar interface" loading="lazy" width="400" height="300">
+                        </div>
+                    </article>
+
+                    <article class="detailed-feature" data-category="tracking">
+                        <div class="feature-content">
+                            <h2>Budget Tracking & Analytics</h2>
+                            <p class="feature-description">Set monthly grocery budgets and track your spending in real-time. Get insights into where your money goes and discover opportunities to save.</p>
+                            <ul class="feature-benefits">
+                                <li>Visual spending charts and graphs</li>
+                                <li>Category-based budget allocation</li>
+                                <li>Price comparison history</li>
+                                <li>Spending alerts when approaching limits</li>
+                                <li>Export reports for personal finance apps</li>
+                            </ul>
+                        </div>
+                        <div class="feature-visual">
+                            <img src="images/feature-budget.jpg" alt="Budget tracking dashboard" loading="lazy" width="400" height="300">
+                        </div>
+                    </article>
+
+                    <article class="detailed-feature reverse" data-category="shopping">
+                        <div class="feature-content">
+                            <h2>Smart Reminders</h2>
+                            <p class="feature-description">Never forget to pick up groceries again. Get location-based reminders when you're near your favorite stores, or set time-based alerts for when items need to be restocked.</p>
+                            <ul class="feature-benefits">
+                                <li>Location-aware notifications</li>
+                                <li>Custom reminder schedules</li>
+                                <li>Low-stock alerts for pantry items</li>
+                                <li>Recurring reminder patterns</li>
+                                <li>Do Not Disturb mode for focus times</li>
+                            </ul>
+                        </div>
+                        <div class="feature-visual">
+                            <img src="images/feature-reminders.jpg" alt="Smart reminders notification interface" loading="lazy" width="400" height="300">
+                        </div>
+                    </article>
+
+                    <article class="detailed-feature" data-category="tracking">
+                        <div class="feature-content">
+                            <h2>Shopping Insights</h2>
+                            <p class="feature-description">Understand your shopping habits with detailed analytics. See trends, identify savings opportunities, and reduce food waste with smart insights.</p>
+                            <ul class="feature-benefits">
+                                <li>Monthly shopping pattern analysis</li>
+                                <li>Most frequently purchased items</li>
+                                <li>Price trend tracking</li>
+                                <li>Waste reduction suggestions</li>
+                                <li>Store comparison data</li>
+                            </ul>
+                        </div>
+                        <div class="feature-visual">
+                            <img src="images/feature-insights.jpg" alt="Shopping insights and analytics" loading="lazy" width="400" height="300">
+                        </div>
+                    </article>
+
+                    <article class="detailed-feature reverse" data-category="sharing">
+                        <div class="feature-content">
+                            <h2>Family Sharing</h2>
+                            <p class="feature-description">Collaborate with family members on shopping lists and meal plans. See real-time updates as others add or check off items.</p>
+                            <ul class="feature-benefits">
+                                <li>Invite family members via email or link</li>
+                                <li>Real-time synchronization</li>
+                                <li>Assign shopping tasks to family members</li>
+                                <li>Comment on items with family notes</li>
+                                <li>Privacy controls for shared lists</li>
+                            </ul>
+                        </div>
+                        <div class="feature-visual">
+                            <img src="images/feature-sharing.jpg" alt="Family sharing collaboration" loading="lazy" width="400" height="300">
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="coming-soon">
+            <div class="container">
+                <h2>Coming Soon</h2>
+                <p class="section-subtitle">Features we're working on</p>
+                <div class="coming-soon-grid">
+                    <div class="coming-soon-item">
+                        <h3>AI Recipe Suggestions</h3>
+                        <p>Get personalized recipe recommendations based on ingredients you have at home.</p>
+                        <span class="timeline">Q2 2026</span>
+                    </div>
+                    <div class="coming-soon-item">
+                        <h3>Store Inventory Integration</h3>
+                        <p>Check real-time product availability at nearby stores before you shop.</p>
+                        <span class="timeline">Q3 2026</span>
+                    </div>
+                    <div class="coming-soon-item">
+                        <h3>Coupon & Deals Finder</h3>
+                        <p>Automatically find and apply coupons for items on your shopping list.</p>
+                        <span class="timeline">Q3 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Transform Your Grocery Shopping?</h2>
+                <p>Download GoGrocIt today and start shopping smarter.</p>
+                <div class="cta-buttons">
+                    <a href="https://apps.apple.com" class="btn btn-primary" target="_blank" rel="noopener">Download for iOS</a>
+                    <a href="https://play.google.com" class="btn btn-primary" target="_blank" rel="noopener">Download for Android</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GoGrocIt</h3>
+                    <p>Making grocery shopping simple and efficient for everyone.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="tickets.html">Submit Ticket</a></li>
+                        <li><a href="references.html">References</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GoGrocIt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
